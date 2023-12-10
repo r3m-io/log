@@ -1,0 +1,18 @@
+{
+  "System": {
+    "Route": [
+      {
+        "#class": "System.Route",
+        "name": "r3m-io-cli-log",
+        "path": "r3m_io\/log",
+        "controller": "Package.R3m.Io.Log.Controller.Cli.run",
+        "request": {
+          "language": "en"
+        },
+        "method": [
+          "CLI"
+        ]
+      }
+    ]
+  }
+}
