@@ -1,6 +1,6 @@
 <?php
 
-namespace Package\R3m\Io\Doctrine\Controller;
+namespace Package\R3m\Io\Log\Controller;
 
 use R3m\Io\App;
 use R3m\Io\Config;
