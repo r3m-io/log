@@ -6,6 +6,7 @@
         "name": "r3m-io-cli-log",
         "path": "r3m_io\/log",
         "controller": "Package.R3m.Io.Log.Controller.Cli.run",
+        "priority": 1001,
         "request": {
           "language": "en"
         },
