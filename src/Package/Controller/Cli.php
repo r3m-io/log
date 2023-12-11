@@ -22,10 +22,9 @@ class Cli extends Controller {
     const DIR = __DIR__ . '/';
     const MODULE_INFO = 'Info';
     const INFO = [
-        '{{binary()}} r3m-io/node                    | Node (Object store) options',
-        '{{binary()}} r3m-io/node app                | Node (Object App) options',
-        '{{binary()}} r3m-io/node object             | Node (Object Classes) options',
-        '{{binary()}} r3m-io/node setup              | Node setup'
+        '{{binary()}} r3m_io/log                     | log options',
+        '{{binary()}} r3m_io/log setup               | Log setup',
+        '{{binary()}} r3m_io/log archive <archive>   | Zip <archive> into <archive>.{literal}{date(\'Y-m-d H:i:s\')}{/literal}.log.zip',
     ];
 
     /**
