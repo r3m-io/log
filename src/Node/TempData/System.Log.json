@@ -1,0 +1,101 @@
+{
+    "System": {
+        "Log": [
+            {
+                "uuid": "f2ce95d7-7384-4465-b0a8-d4b8c37a8531",
+                "#class": "System.Log",
+                "name": "app",
+                "default": true,
+                "handler": [
+                    "0a36ca31-458b-40d3-845c-be81b59a0ad0"
+                ],
+                "processor": [
+                    "d90d10f6-33c8-4aaf-a501-240bce0fcfbe"
+                ],
+                "channel": [
+                    "security",
+                    "fileRequest"
+                ],
+                "options": {
+                    "class": "Monolog\\Logger",
+                    "parameters": []
+                }
+            },
+            {
+                "uuid": "13b16566-5ef2-4726-ab7d-bed70ebfffa1",
+                "#class": "System.Log",
+                "name": "error",
+                "handler": [
+                    "6109eecf-bcf9-46b4-84ec-9d4700422553"
+                ],
+                "processor": [
+                    "d90d10f6-33c8-4aaf-a501-240bce0fcfbe"
+                ],
+                "options": {
+                    "class": "Monolog\\Logger",
+                    "parameters": []
+                }
+            },
+            {
+                "uuid": "87aac3bb-baa8-4455-9ff0-2244111fc531",
+                "#class": "System.Log",
+                "name": "email",
+                "handler": [
+                    "840ec725-fee6-4191-a9e1-7bc088f4b321"
+                ],
+                "processor": [
+                    "d90d10f6-33c8-4aaf-a501-240bce0fcfbe"
+                ],
+                "options": {
+                    "class": "Monolog\\Logger",
+                    "parameters": []
+                }
+            },
+            {
+                "uuid": "ff8d9c98-01b2-4af1-81c4-4b49516bd856",
+                "#class": "System.Log",
+                "name": "node",
+                "handler": [
+                    "dc91243b-c7e7-473b-8434-7bfb4cfe727b"
+                ],
+                "processor": [
+                    "d90d10f6-33c8-4aaf-a501-240bce0fcfbe"
+                ],
+                "options": {
+                    "class": "Monolog\\Logger",
+                    "parameters": []
+                }
+            },
+            {
+                "uuid": "c0c0ed4c-a87c-4d38-8255-2ce7878015b5",
+                "#class": "System.Log",
+                "name": "sql",
+                "handler": [
+                    "4ba5082b-29ec-4641-827b-d59f41f4dd98"
+                ],
+                "processor": [
+                    "d90d10f6-33c8-4aaf-a501-240bce0fcfbe"
+                ],
+                "options": {
+                    "class": "Monolog\\Logger",
+                    "parameters": []
+                }
+            },
+            {
+                "uuid": "30150cac-35cd-4266-8dd3-343903aa9b35",
+                "#class": "System.Log",
+                "name": "system",
+                "handler": [
+                    "c7aa2169-7970-4be8-84e3-b7778206ccb1"
+                ],
+                "processor": [
+                    "d90d10f6-33c8-4aaf-a501-240bce0fcfbe"
+                ],
+                "options": {
+                    "class": "Monolog\\Logger",
+                    "parameters": []
+                }
+            }
+        ]
+    }
+}

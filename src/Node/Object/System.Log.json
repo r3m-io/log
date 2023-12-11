@@ -58,12 +58,12 @@
     "relation": [
         {
             "type": "one-many",
-            "class": "System.Config.Log.Handler",
+            "class": "System.Log.Handler",
             "attribute": "handler"
         },
         {
             "type": "one-many",
-            "class": "System.Config.Log.Processor",
+            "class": "System.Log.Processor",
             "attribute": "processor"
         }
     ]

@@ -22,10 +22,9 @@ class Cli extends Controller {
     const DIR = __DIR__ . '/';
     const MODULE_INFO = 'Info';
     const INFO = [
-        '{{binary()}} r3m-io/node                    | Node (Object store) options',
-        '{{binary()}} r3m-io/node app                | Node (Object App) options',
-        '{{binary()}} r3m-io/node object             | Node (Object Classes) options',
-        '{{binary()}} r3m-io/node setup              | Node setup'
+        '{{binary()}} r3m_io/log                     | log options',
+        '{{binary()}} r3m_io/log setup               | Log setup',
+        '{{binary()}} r3m_io/log archive <archive>   | Zip <archive> into <archive>.{literal}{date(\'Y-m-d H:i:s\')}{/literal}.log.zip',
     ];
 
     /**
@@ -33,6 +32,7 @@ class Cli extends Controller {
      * @throws Exception
      */
     public static function run(App $object){
+        /*
         $autoload = [];
         $data = new Data();
         $data->set('prefix', 'Node');
@@ -41,6 +41,7 @@ class Cli extends Controller {
         $data->clear();
         $data->set('autoload', $autoload);
         Cli::autoload($object, $data);
+        */
         $node = $object->request(0);
         $scan = Cli::scan($object);
         $module = $object->parameter($object, $node, 1);
@@ -194,23 +195,6 @@ class Cli extends Controller {
                     $object,
                     ucfirst($module)
                 );
-            }
-            $object->request('package', $node);
-            $object->request('module', $module);
-            if($submodule){
-                $object->request('submodule', $submodule);
-            }
-            if($command){
-                $object->request('command', $command);
-            }
-            if($subcommand){
-                $object->request('subcommand', $subcommand);
-            }
-            if($action){
-                $object->request('action', $action);
-            }
-            if($subaction){
-                $object->request('subaction', $subaction);
             }
             return Cli::response($object, $url);
         } catch (Exception | UrlEmptyException | UrlNotExistException | LocateException $exception){

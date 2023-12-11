@@ -1,7 +1,7 @@
 {
     "System": {
-        "Config": {
-            "Log": {
+        "Log": {
+            "Handler": {
                 "count": {
                     "expose": [
                         {
@@ -9,11 +9,6 @@
                             "property": [
                                 "uuid",
                                 "#class",
-                                "name",
-                                "default",
-                                "handler",
-                                "processor",
-                                "channel",
                                 "options"
                             ],
                             "object": {
@@ -35,11 +30,6 @@
                             "property": [
                                 "uuid",
                                 "#class",
-                                "name",
-                                "default",
-                                "handler",
-                                "processor",
-                                "channel",
                                 "options"
                             ],
                             "object": {
@@ -61,11 +51,6 @@
                             "property": [
                                 "uuid",
                                 "#class",
-                                "name",
-                                "default",
-                                "handler",
-                                "processor",
-                                "channel",
                                 "options"
                             ],
                             "object": {
@@ -87,11 +72,6 @@
                             "property": [
                                 "uuid",
                                 "#class",
-                                "name",
-                                "default",
-                                "handler",
-                                "processor",
-                                "channel",
                                 "options"
                             ],
                             "object": {
@@ -113,11 +93,6 @@
                             "property": [
                                 "uuid",
                                 "#class",
-                                "name",
-                                "default",
-                                "handler",
-                                "processor",
-                                "channel",
                                 "options"
                             ],
                             "object": {
@@ -139,11 +114,6 @@
                             "property": [
                                 "uuid",
                                 "#class",
-                                "name",
-                                "default",
-                                "handler",
-                                "processor",
-                                "channel",
                                 "options"
                             ],
                             "object": {
@@ -165,11 +135,6 @@
                             "property": [
                                 "uuid",
                                 "#class",
-                                "name",
-                                "default",
-                                "handler",
-                                "processor",
-                                "channel",
                                 "options"
                             ],
                             "object": {
@@ -191,11 +156,6 @@
                             "property": [
                                 "uuid",
                                 "#class",
-                                "name",
-                                "default",
-                                "handler",
-                                "processor",
-                                "channel",
                                 "options"
                             ],
                             "object": {
