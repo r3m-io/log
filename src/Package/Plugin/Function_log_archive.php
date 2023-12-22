@@ -31,28 +31,26 @@ function function_log_archive(Parse $parse, Data $data){
             $explode[1] .
             '.zip'
         ;
-        if(array_key_exists('_', $_SERVER)){
-            $dirname = Dir::name($_SERVER['_']);
-            $binary = str_replace($dirname, '', $_SERVER['_']);
-            $execute = $binary . ' zip archive ' . $source . ' ' . $destination;
-            Core::execute($object, $execute, $output);
-            File::chown($dir, 'www-data', 'www-data', true);
-            if($object->config('project.log.name')){
-                $object->logger($object->config('project.log.name'))->info('log_archive dir', [ $dir ]);
-            }
-            File::write($source,'');
-            $dir = Dir::name($source);
-            File::chown($dir, 'www-data', 'www-data', true);
-            if($object->config('project.log.name')){
-                $object->logger($object->config('project.log.name'))->info('log_archive dir', [ $dir ]);
-            }
-            Event::trigger($object, 'cli.log.archive', [
-                'channel' => $explode[0],
-                'source' => $source,
-                'destination' => $destination,
-                'output' => $output,
-            ]);
-            echo 'Log file has been reset...' . PHP_EOL;
+        $binary = Core::binary($object);
+        $execute = $binary . ' zip archive ' . $source . ' ' . $destination;
+        $output = false;
+        Core::execute($object, $execute, $output);
+        File::chown($dir, 'www-data', 'www-data', true);
+        if($object->config('project.log.name')){
+            $object->logger($object->config('project.log.name'))->info('log_archive dir', [ $dir ]);
         }
+        File::write($source,'');
+        $dir = Dir::name($source);
+        File::chown($dir, 'www-data', 'www-data', true);
+        if($object->config('project.log.name')){
+            $object->logger($object->config('project.log.name'))->info('log_archive dir', [ $dir ]);
+        }
+        Event::trigger($object, 'cli.log.archive', [
+            'channel' => $explode[0],
+            'source' => $source,
+            'destination' => $destination,
+            'output' => $output,
+        ]);
+        echo 'Log file has been reset...' . PHP_EOL;
     }
 }
