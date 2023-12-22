@@ -14,24 +14,30 @@ trait Import {
     public function role_system(): void
     {
         $object = $this->object();
-        $node = new Node($object);
-        $node->role_system_create('r3m_io/log');
+        $package = $object->request('package');
+        if($package){
+            $node = new Node($object);
+            $node->role_system_create($package);
+        }
     }
 
     public function log_handler(): void
     {
         $object = $this->object();
-        $options = App::options($object);
-        ddd($object->request());
-        $class = 'System.Log.Handler';
-        $options->url = $object->config('project.dir.vendor') .
-            'r3m_io/log/Data/' .
-            $class .
-            $object->config('extension.json')
-        ;
-        $options->uuid = true;
-        $node = new Node($object);
-        $response = $node->import($class, $node->role_system(), $options);
-        $node->stats($class, $response);
+        $package = $object->request('package');
+        if($package){
+            $options = App::options($object);
+            $class = 'System.Log.Handler';
+            $options->url = $object->config('project.dir.vendor') .
+                $package . '/Data/' .
+                $class .
+                $object->config('extension.json')
+            ;
+            $options->uuid = true;
+            $node = new Node($object);
+            $response = $node->import($class, $node->role_system(), $options);
+            $node->stats($class, $response);
+        }
+
     }
 }
