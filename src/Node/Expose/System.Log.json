@@ -53,6 +53,32 @@
                     }
                 ]
             },
+            "create_many": {
+                "expose": [
+                    {
+                        "role": "ROLE_SYSTEM",
+                        "property": [
+                            "uuid",
+                            "#class",
+                            "name",
+                            "default",
+                            "handler",
+                            "processor",
+                            "channel",
+                            "options"
+                        ],
+                        "object": {
+                            "options": {
+                                "multiple": false,
+                                "expose": [
+                                    "class",
+                                    "parameters"
+                                ]
+                            }
+                        }
+                    }
+                ]
+            },
             "list": {
                 "expose": [
                     {
@@ -131,7 +157,59 @@
                     }
                 ]
             },
+            "patch_many": {
+                "expose": [
+                    {
+                        "role": "ROLE_SYSTEM",
+                        "property": [
+                            "uuid",
+                            "#class",
+                            "name",
+                            "default",
+                            "handler",
+                            "processor",
+                            "channel",
+                            "options"
+                        ],
+                        "object": {
+                            "options": {
+                                "multiple": false,
+                                "expose": [
+                                    "class",
+                                    "parameters"
+                                ]
+                            }
+                        }
+                    }
+                ]
+            },
             "put": {
+                "expose": [
+                    {
+                        "role": "ROLE_SYSTEM",
+                        "property": [
+                            "uuid",
+                            "#class",
+                            "name",
+                            "default",
+                            "handler",
+                            "processor",
+                            "channel",
+                            "options"
+                        ],
+                        "object": {
+                            "options": {
+                                "multiple": false,
+                                "expose": [
+                                    "class",
+                                    "parameters"
+                                ]
+                            }
+                        }
+                    }
+                ]
+            },
+            "put_many": {
                 "expose": [
                     {
                         "role": "ROLE_SYSTEM",
