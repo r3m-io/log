@@ -14,6 +14,17 @@
                     }
                 },
                 {
+                    "uuid": "6b0c9c51-82df-4b02-96e9-70d49e3a7643",
+                    "#class": "System.Log.Handler",
+                    "options": {
+                        "class": "Monolog\\Handler\\StreamHandler",
+                        "parameters": [
+                            "{{config('project.dir.log')}}debug.log",
+                            "DEBUG"
+                        ]
+                    }
+                },
+                {
                     "uuid": "6109eecf-bcf9-46b4-84ec-9d4700422553",
                     "#class": "System.Log.Handler",
                     "options": {
