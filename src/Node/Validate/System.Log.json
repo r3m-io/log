@@ -11,7 +11,7 @@
                     "name": [
                         {
                             "is.unique": {
-                                "class": "System.Config.Log",
+                                "class": "System.Log",
                                 "attribute": [
                                     "name"
                                 ]
@@ -30,7 +30,7 @@
                     "name": [
                         {
                             "is.unique": {
-                                "class": "System.Config.Log",
+                                "class": "System.Log",
                                 "attribute": [
                                     "name"
                                 ]
@@ -49,7 +49,7 @@
                     "name": [
                         {
                             "is.unique": {
-                                "class": "System.Config.Log",
+                                "class": "System.Log",
                                 "attribute": [
                                     "name"
                                 ]
