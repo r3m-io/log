@@ -1,5 +1,5 @@
 <?php
-namespace Package\R3m\Io\Server\Trait;
+namespace Package\R3m\Io\Log\Trait;
 
 use R3m\Io\App;
 
