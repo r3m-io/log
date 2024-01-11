@@ -1,8 +1,6 @@
 <?php
 
-use R3m\Io\App;
 use R3m\Io\Module\Data;
-use R3m\Io\Module\Database;
 use R3m\Io\Module\Dir;
 use R3m\Io\Module\Core;
 use R3m\Io\Module\Event;
