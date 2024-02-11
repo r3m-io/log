@@ -25,6 +25,7 @@ trait Import {
     {
         $object = $this->object();
         $package = $object->request('package');
+        ddd($package);
         if($package){
             $options = App::options($object);
             $class = 'System.Log.Handler';
