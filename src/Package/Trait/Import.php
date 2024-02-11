@@ -3,6 +3,8 @@ namespace Package\R3m\Io\Log\Trait;
 
 use R3m\Io\App;
 
+use R3m\Io\Exception\FileWriteException;
+use R3m\Io\Exception\ObjectException;
 use R3m\Io\Module\Core;
 use R3m\Io\Module\File;
 
@@ -21,11 +23,14 @@ trait Import {
         }
     }
 
+    /**
+     * @throws ObjectException
+     * @throws FileWriteException
+     */
     public function log_handler(): void
     {
         $object = $this->object();
         $package = $object->request('package');
-        ddd($package);
         if($package){
             $options = App::options($object);
             $class = 'System.Log.Handler';
@@ -41,6 +46,10 @@ trait Import {
         }
     }
 
+    /**
+     * @throws ObjectException
+     * @throws FileWriteException
+     */
     public function log_processor(): void
     {
         $object = $this->object();
