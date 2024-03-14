@@ -16,7 +16,9 @@ trait Main {
             throw new Exception('Option channel is required...');
         }
         $object = $this->object();
-        d($object->config('project.dir'));
+        $log = $object->config('log');
+        ddd($log);
+        d($object->config('project.dir.log'));
         d($flags);
         d($options);
     }
