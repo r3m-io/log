@@ -12,6 +12,11 @@ use Exception;
 trait Main {
 
     public function log_clear($flags, $options){
+        if(!property_exists($options, 'channel')){
+            throw new Exception('Option channel is required...');
+        }
+        $object = $this->object();
+        d($object->config('project.dir'));
         d($flags);
         d($options);
     }
