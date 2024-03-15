@@ -26,26 +26,40 @@ trait Main {
             $options->channel = [$options->channel];
         }
         foreach($options->channel as $channel){
-            $log = $object->config('log.' . $channel);
-            if($log){
-                $log = new Data($log);
-                $handler = $log->get('handler');
-                if(is_array($handler)){
-                    foreach($handler as $node){
-                        $node = new Data($node);
-                        $parameters = $node->get('options.parameters');
-                        if($parameters){
-                            $parameters = Config::parameters($object, $parameters);
-                            if(
-                                array_key_exists(0, $parameters) &&
-                                File::exist($parameters[0])
-                            ){
-                                File::write($parameters[0], '');
+            if(
+                in_array(
+                    $channel,
+                    [
+                        'apache2_access',
+                        'apache2_error',
+                    ], true
+                )
+            ){
+                $url = $object->config('project.dir.log') . '/' . $channel . '.log';
+                File::write($url, '');
+            } else {
+                $log = $object->config('log.' . $channel);
+                if($log){
+                    $log = new Data($log);
+                    $handler = $log->get('handler');
+                    if(is_array($handler)){
+                        foreach($handler as $node){
+                            $node = new Data($node);
+                            $parameters = $node->get('options.parameters');
+                            if($parameters){
+                                $parameters = Config::parameters($object, $parameters);
+                                if(
+                                    array_key_exists(0, $parameters) &&
+                                    File::exist($parameters[0])
+                                ){
+                                    File::write($parameters[0], '');
+                                }
                             }
                         }
                     }
                 }
             }
+
         }
     }
 }
