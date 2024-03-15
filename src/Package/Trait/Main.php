@@ -26,6 +26,7 @@ trait Main {
                 if(is_array($handler)){
                     foreach($handler as $node){
                         $node = new Data($node);
+                        ddd($node);
                         $parameters = $node->get('parameters');
                         if($parameters){
                             $parameters = new Data($parameters);
