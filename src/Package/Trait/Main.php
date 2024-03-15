@@ -36,12 +36,7 @@ trait Main {
                 }
             }
         }
-        $log = $object->config('log.' . $options->channel);
-        if($log){
-            $log = new Data($log);
-            ddd($log);
-        }
-        d($object->config('project.dir.log'));
+
         d($flags);
         d($options);
     }
