@@ -42,7 +42,7 @@ trait Import {
             $options->uuid = true;
             $node = new Node($object);
             $response = $node->import($class, $node->role_system(), $options);
-            $node->stats($class, $response);
+//            $node->stats($class, $response);
         }
     }
 
