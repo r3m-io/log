@@ -28,7 +28,6 @@ trait Main {
                         $node = new Data($node);
                         $parameters = $node->get('options.parameters');
                         if($parameters){
-                            $parameters = new Data($parameters);
                             $parameters = Config::parameters($object, $parameters);
                             ddd($parameters);
                         }
