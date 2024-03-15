@@ -42,7 +42,7 @@ trait Import {
             $options->uuid = true;
             $node = new Node($object);
             $response = $node->import($class, $node->role_system(), $options);
-//            $node->stats($class, $response);
+            $node->stats($class, $response);
         }
     }
 
@@ -65,7 +65,7 @@ trait Import {
             $options->uuid = true;
             $node = new Node($object);
             $response = $node->import($class, $node->role_system(), $options);
-//            $node->stats($class, $response);
+            $node->stats($class, $response);
         }
     }
 
@@ -83,7 +83,7 @@ trait Import {
             ;
             $node = new Node($object);
             $response = $node->import($class, $node->role_system(), $options);
-//            $node->stats($class, $response);
+            $node->stats($class, $response);
             $class = 'System.Config';
             $response = $node->record($class, $node->role_system(), []);
             if(
