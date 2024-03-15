@@ -16,7 +16,8 @@ trait Main {
      * @throws FileWriteException
      * @throws Exception
      */
-    public function log_clear($flags, $options){
+    public function log_clear($flags, $options): void
+    {
         if(!property_exists($options, 'channel')){
             throw new Exception('Option channel is required...');
         }
