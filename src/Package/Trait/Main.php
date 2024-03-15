@@ -30,7 +30,9 @@ trait Main {
                 in_array(
                     $channel,
                     [
+                        'apache_access',
                         'apache2_access',
+                        'apache_error',
                         'apache2_error',
                     ], true
                 )
